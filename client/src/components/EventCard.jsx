@@ -18,7 +18,7 @@ export default function EventCard({ e, onUpdate }) {
     try {
       const { data } = joined ? await api.delete(`/events/${e._id}/inscription`) : await api.post(`/events/${e._id}/inscription`);
       onUpdate(e._id, data.inscrits);
-    } catch (x) { setErr(errMsg(x)); }
+    } catch (x) { setErr(errMsg(x)); } 
   };
 
   return (

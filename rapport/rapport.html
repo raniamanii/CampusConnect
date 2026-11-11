@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<title>CampusConnect — Rapport synthétique</title>
+<style>
+  @page { size: A4; margin: 12mm 12mm 12mm 12mm; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #23203a; font-size: 10.3px; line-height: 1.4;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  .page { padding: 0; }
+  .page + .page { page-break-before: always; }
+
+  h1, h2, h3 { color: #4F2BC4; margin: 0 0 5px; line-height: 1.18; }
+  h1 { font-size: 20px; }
+  h2 {
+    font-size: 14px; margin: 11px 0 5px; padding-left: 9px;
+    border-left: 4px solid #7C3AED;
+  }
+  h3 { font-size: 11.3px; color: #2F2A55; margin: 8px 0 3px; }
+  p { margin: 0 0 5px; }
+  ul { margin: 3px 0 6px; padding-left: 16px; }
+  li { margin-bottom: 2px; }
+  small { color: #6c6785; }
+
+  /* Couverture */
+  .cover { text-align: center; padding-top: 16mm; }
+  .cover .badge {
+    display: inline-grid; place-items: center; width: 70px; height: 70px; border-radius: 22px;
+    background: linear-gradient(135deg,#8B5CF6,#EC4899); color: #fff;
+    font-size: 36px; font-weight: 800; margin-bottom: 14px;
+  }
+  .cover h1 { font-size: 29px; letter-spacing: -.5px; }
+  .cover .sub { font-size: 13px; color: #6c6785; margin-bottom: 22px; }
+  .cover .rule { height: 5px; width: 120px; margin: 0 auto 22px; border-radius: 4px;
+    background: linear-gradient(90deg,#7C3AED,#EC4899,#F59E0B); }
+  .infobox {
+    display: inline-block; text-align: left; border: 1px solid #E7E2F7; border-radius: 14px;
+    padding: 12px 20px; background: #FAF9FF; min-width: 320px;
+  }
+  .infobox div { margin: 3px 0; }
+  .infobox b { color: #4F2BC4; display: inline-block; min-width: 132px; }
+
+  /* Tableaux */
+  table { width: 100%; border-collapse: collapse; margin: 4px 0 7px; font-size: 9.5px; }
+  th, td { border: 1px solid #E7E2F7; padding: 3px 6px; text-align: left; vertical-align: top; }
+  th { background: #F3EEFF; color: #4F2BC4; font-weight: 700; }
+  tr:nth-child(even) td { background: #FBFAFF; }
+  code, .mono { font-family: "Cascadia Code", Consolas, "Courier New", monospace; font-size: 9.1px; }
+  td code { background: #F3EEFF; padding: 0 3px; border-radius: 4px; }
+
+  pre {
+    background: #1E1B33; color: #EDE9FE; border-radius: 9px; padding: 7px 10px;
+    font-family: "Cascadia Code", Consolas, "Courier New", monospace; font-size: 8.4px;
+    line-height: 1.32; overflow-x: auto; margin: 4px 0 7px; white-space: pre-wrap;
+  }
+  pre .c { color: #9CA3AF; }   /* commentaires */
+  pre .k { color: #C4B5FD; }   /* mots-clés */
+
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .note {
+    border: 1px solid #E7E2F7; border-left: 4px solid #7C3AED; background: #FBFAFF;
+    border-radius: 8px; padding: 6px 10px; margin: 6px 0;
+  }
+  .pill { display: inline-block; background: #F3EEFF; color: #6D28D9; border-radius: 999px;
+    padding: 1px 8px; font-size: 9px; font-weight: 700; margin-right: 4px; }
+
+  /* Captures */
+  figure { margin: 0 0 8px; page-break-inside: avoid; }
+  figure img { width: 100%; border: 1px solid #E0DAF3; border-radius: 9px; display: block; }
+  figcaption { font-size: 9.4px; color: #6c6785; margin-top: 3px; text-align: center; }
+
+  /* Diagramme de relations */
+  .rel { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 6px 0; }
+  .rel div { border: 1px solid #E7E2F7; border-radius: 9px; padding: 6px 9px; background: #FBFAFF; font-size: 9.7px; }
+  .rel b { color: #4F2BC4; }
+
+  /* Grille de captures */
+  .shots { display: grid; grid-template-columns: 1fr 1fr; gap: 9px 10px; margin-top: 6px; }
+  .shots figure { margin: 0; }
+</style>
+</head>
+<body>
+
+<!-- ============ PAGE 1 — COUVERTURE ============ -->
+<section class="page cover">
+  <div class="badge">C</div>
+  <h1>CampusConnect</h1>
+  <div class="sub">Plateforme de vie étudiante — événements universitaires, inscriptions, avis et publication par les clubs</div>
+  <div class="rule"></div>
+  <div class="infobox">
+    <div><b>Type de document</b> Rapport synthétique de projet</div>
+    <div><b>Projet</b> CampusConnect (application web MERN)</div>
+    <div><b>Technologies</b> MongoDB · Express · React · Node.js</div>
+    <div><b>Réalisé par</b> ____________________________</div>
+    <div><b>Encadré par</b> ____________________________</div>
+    <div><b>Année universitaire</b> 2025 – 2026</div>
+  </div>
+</section>
+
+<!-- ============ PAGE 2 — SOMMAIRE + PRÉSENTATION ============ -->
+<section class="page">
+  <h2>Sommaire</h2>
+  <ol style="margin:4px 0 14px; padding-left:20px">
+    <li>Présentation du projet</li>
+    <li>Architecture technique</li>
+    <li>Schémas Mongoose (modèle de données)</li>
+    <li>API REST</li>
+    <li>Captures d’écran de l’application</li>
+    <li>Conclusion et perspectives</li>
+  </ol>
+
+  <h2>1. Présentation du projet</h2>
+  <p>
+    <b>CampusConnect</b> est une application web qui centralise la vie associative et événementielle d’un campus
+    universitaire. Elle permet aux étudiants de découvrir les événements, de s’y inscrire et de laisser un avis,
+    et aux clubs de publier leurs propres événements sous le contrôle d’un administrateur.
+  </p>
+
+  <h3>Objectifs</h3>
+  <ul>
+    <li>Regrouper en un seul endroit tous les événements du campus (culture, sport, technologie, carrière, science).</li>
+    <li>Simplifier les inscriptions et le suivi des places disponibles.</li>
+    <li>Permettre la publication d’événements par les clubs avec une validation par un administrateur.</li>
+    <li>Recueillir la satisfaction des participants via des avis notés (1 à 5 étoiles).</li>
+  </ul>
+
+  <h3>Acteurs et rôles</h3>
+  <table>
+    <tr><th style="width:130px">Rôle</th><th>Droits et fonctionnalités</th></tr>
+    <tr><td><span class="pill">étudiant</span></td><td>Consulter les événements, s’inscrire / se désinscrire, gérer « Mes inscriptions », donner un avis (après inscription).</td></tr>
+    <tr><td><span class="pill">club</span></td><td>Toutes les actions étudiant + publier de nouveaux événements (soumis à validation) et gérer ses publications.</td></tr>
+    <tr><td><span class="pill">admin</span></td><td>Valider ou refuser les événements en attente, publier directement, supprimer tout événement ou avis.</td></tr>
+    <tr><td><span class="pill">visiteur</span></td><td>Parcourir les événements en lecture seule ; invitation à se connecter pour s’inscrire.</td></tr>
+  </table>
+
+  <h3>Fonctionnalités principales</h3>
+  <ul>
+    <li><b>Authentification</b> par e-mail / mot de passe avec jeton JWT et mot de passe haché (bcrypt).</li>
+    <li><b>Tableau de bord</b> : statistiques personnelles, compte à rebours du prochain événement.</li>
+    <li><b>Exploration</b> des événements : recherche plein texte, filtre par catégorie, tri, places disponibles, événements passés.</li>
+    <li><b>Inscriptions</b> en un clic avec suivi de la capacité (barre de remplissage).</li>
+    <li><b>Avis</b> : note + commentaire, un seul avis par étudiant et par événement.</li>
+    <li><b>Publication</b> par les clubs et <b>modération</b> par l’administrateur.</li>
+  </ul>
+</section>
+
+<!-- ============ PAGE 3 — ARCHITECTURE ============ -->
+<section class="page">
+  <h2>2. Architecture technique</h2>
+  <p>
+    L’application suit une architecture <b>client / serveur</b> classique : une interface React (SPA) consomme
+    une API REST Node/Express, qui persiste les données dans MongoDB via Mongoose.
+  </p>
+
+  <table>
+    <tr><th style="width:140px">Couche</th><th>Technologies</th></tr>
+    <tr><td>Front-end</td><td>React 18, Vite 5, React Router 6, Axios, CSS personnalisé (thème clair/sombre)</td></tr>
+    <tr><td>Back-end</td><td>Node.js, Express 4, Mongoose 8, JSON Web Token, bcrypt, CORS, dotenv</td></tr>
+    <tr><td>Base de données</td><td>MongoDB (hébergement MongoDB Atlas)</td></tr>
+    <tr><td>Déploiement</td><td>Front : Vercel · API : Render · Base : MongoDB Atlas</td></tr>
+  </table>
+
+  <h3>Arborescence du projet</h3>
+  <pre>campusconnect/
+├── server/                 <span class="c"># API REST (Node.js / Express)</span>
+│   ├── models/             <span class="c"># Schémas Mongoose : User, Event, Feedback</span>
+│   ├── routes/             <span class="c"># auth.js, events.js, feedback.js</span>
+│   ├── middleware/         <span class="c"># protect.js (JWT + contrôle des rôles)</span>
+│   ├── seed.js             <span class="c"># Jeu de données de démonstration</span>
+│   └── server.js           <span class="c"># Point d'entrée de l'API</span>
+└── client/                 <span class="c"># Interface utilisateur (React / Vite)</span>
+    └── src/
+        ├── components/     <span class="c"># Layout, EventCard, Stars</span>
+        ├── pages/          <span class="c"># Dashboard, Browse, EventDetail, Publish…</span>
+        ├── AuthContext.jsx <span class="c"># Contexte d'authentification</span>
+        └── api.js          <span class="c"># Client Axios (injection du JWT)</span></pre>
+
+  <h3>Flux d’une requête</h3>
+  <p>
+    Le navigateur envoie une requête HTTP à l’API. Si la route est protégée, le middleware
+    <code>protect</code> vérifie l’en-tête <code>Authorization: Bearer &lt;token&gt;</code>, décode le JWT,
+    charge l’utilisateur puis laisse passer. Un second middleware, <code>restrictTo(...)</code>, limite l’accès
+    à certains rôles. La réponse est renvoyée au format JSON.
+  </p>
+  <div class="note">
+    <b>Sécurité :</b> mots de passe hachés avec <b>bcrypt</b> (coût 10), jetons <b>JWT</b> valables 7 jours,
+    accès CORS restreint aux origines autorisées, contrôle systématique des rôles côté serveur.
+  </div>
+</section>
+
+<!-- ============ PAGE 4 — SCHÉMAS MONGOOSE ============ -->
+<section class="page">
+  <h2>3. Schémas Mongoose (modèle de données)</h2>
+  <p>Trois modèles composent la base : <b>User</b>, <b>Event</b> et <b>Feedback</b>.</p>
+
+  <h3>3.1 User</h3>
+  <pre><span class="k">const</span> userSchema = <span class="k">new</span> mongoose.Schema({
+  nom:        { type: String, required: <span class="k">true</span>, trim: <span class="k">true</span> },
+  email:      { type: String, required: <span class="k">true</span>, unique: <span class="k">true</span>, lowercase: <span class="k">true</span>, trim: <span class="k">true</span> },
+  motDePasse: { type: String, required: <span class="k">true</span>, minlength: 6 },
+  role:       { type: String, enum: [<span class="c">'etudiant','club','admin'</span>], default: <span class="c">'etudiant'</span> },
+}, { timestamps: <span class="k">true</span> });</pre>
+  <table>
+    <tr><th style="width:120px">Champ</th><th style="width:110px">Type</th><th>Contraintes</th></tr>
+    <tr><td><code>nom</code></td><td>String</td><td>Obligatoire, espaces retirés</td></tr>
+    <tr><td><code>email</code></td><td>String</td><td>Obligatoire, <b>unique</b>, minuscules</td></tr>
+    <tr><td><code>motDePasse</code></td><td>String</td><td>Obligatoire, 6 caractères minimum (haché)</td></tr>
+    <tr><td><code>role</code></td><td>String</td><td>Valeurs : <code>etudiant</code> · <code>club</code> · <code>admin</code></td></tr>
+  </table>
+
+  <h3>3.2 Event</h3>
+  <pre><span class="k">const</span> eventSchema = <span class="k">new</span> mongoose.Schema({
+  titre:        { type: String, required: <span class="k">true</span>, trim: <span class="k">true</span> },
+  description:  { type: String, required: <span class="k">true</span> },
+  categorie:    { type: String, enum: [<span class="c">'Technologie','Culture','Sport','Carrière','Science'</span>], required: <span class="k">true</span> },
+  niveau:       { type: String, enum: [<span class="c">'Tous niveaux','Débutant','Intermédiaire','Avancé'</span>], default: <span class="c">'Tous niveaux'</span> },
+  date:         { type: Date, required: <span class="k">true</span> },
+  heureDebut:   { type: String, required: <span class="k">true</span> },
+  heureFin:     { type: String, required: <span class="k">true</span> },
+  lieu:         { type: String, required: <span class="k">true</span> },
+  capacite:     { type: Number, required: <span class="k">true</span>, min: 1 },
+  tags:         [String],
+  statut:       { type: String, enum: [<span class="c">'en_attente','publie'</span>], default: <span class="c">'en_attente'</span> },
+  organisateur: { type: ObjectId, ref: <span class="c">'User'</span>, required: <span class="k">true</span> },  <span class="c">// User 1 → N Event</span>
+  inscrits:     [{ type: ObjectId, ref: <span class="c">'User'</span> }],              <span class="c">// User N ↔ N Event</span>
+}, { timestamps: <span class="k">true</span> });</pre>
+  <table>
+    <tr><th style="width:120px">Champ</th><th style="width:110px">Type</th><th>Contraintes</th></tr>
+    <tr><td><code>titre</code></td><td>String</td><td>Obligatoire</td></tr>
+    <tr><td><code>description</code></td><td>String</td><td>Obligatoire</td></tr>
+    <tr><td><code>categorie</code></td><td>String</td><td>Obligatoire · 5 catégories (enum)</td></tr>
+    <tr><td><code>niveau</code></td><td>String</td><td>Défaut « Tous niveaux »</td></tr>
+    <tr><td><code>date</code> · <code>heureDebut</code> · <code>heureFin</code></td><td>Date / String</td><td>Obligatoires</td></tr>
+    <tr><td><code>lieu</code></td><td>String</td><td>Obligatoire</td></tr>
+    <tr><td><code>capacite</code></td><td>Number</td><td>Obligatoire, minimum 1</td></tr>
+    <tr><td><code>tags</code></td><td>[String]</td><td>Liste libre (mots-clés)</td></tr>
+    <tr><td><code>statut</code></td><td>String</td><td><code>en_attente</code> · <code>publie</code></td></tr>
+    <tr><td><code>organisateur</code></td><td>ObjectId → User</td><td>Obligatoire (référence)</td></tr>
+    <tr><td><code>inscrits</code></td><td>[ObjectId → User]</td><td>Liste des participants</td></tr>
+  </table>
+</section>
+
+<!-- ============ PAGE 5 — FEEDBACK + RELATIONS ============ -->
+<section class="page">
+  <h3>3.3 Feedback</h3>
+  <pre><span class="k">const</span> feedbackSchema = <span class="k">new</span> mongoose.Schema({
+  event:       { type: ObjectId, ref: <span class="c">'Event'</span>, required: <span class="k">true</span> },  <span class="c">// Event 1 → N Feedback</span>
+  auteur:      { type: ObjectId, ref: <span class="c">'User'</span>,  required: <span class="k">true</span> },
+  note:        { type: Number, required: <span class="k">true</span>, min: 1, max: 5 },
+  commentaire: { type: String, required: <span class="k">true</span>, maxlength: 500 },
+}, { timestamps: <span class="k">true</span> });
+feedbackSchema.index({ event: 1, auteur: 1 }, { unique: <span class="k">true</span> });  <span class="c">// 1 avis par étudiant et par événement</span></pre>
+  <table>
+    <tr><th style="width:120px">Champ</th><th style="width:110px">Type</th><th>Contraintes</th></tr>
+    <tr><td><code>event</code></td><td>ObjectId → Event</td><td>Obligatoire</td></tr>
+    <tr><td><code>auteur</code></td><td>ObjectId → User</td><td>Obligatoire</td></tr>
+    <tr><td><code>note</code></td><td>Number</td><td>Entre 1 et 5</td></tr>
+    <tr><td><code>commentaire</code></td><td>String</td><td>Obligatoire, 500 caractères max.</td></tr>
+    <tr><td colspan="3"><b>Index unique</b> sur (<code>event</code>, <code>auteur</code>) → un étudiant ne peut laisser qu’un seul avis par événement.</td></tr>
+  </table>
+
+  <h3>3.4 Relations entre les modèles</h3>
+  <div class="rel">
+    <div><b>User → Event</b><br>1 → N<br><small>Un organisateur (club/admin) crée plusieurs événements via <code>organisateur</code>.</small></div>
+    <div><b>Event ↔ User</b><br>N ↔ N<br><small>Un événement a plusieurs inscrits ; un utilisateur s’inscrit à plusieurs événements (<code>inscrits[]</code>).</small></div>
+    <div><b>Event → Feedback</b><br>1 → N<br><small>Un événement reçoit plusieurs avis (<code>Feedback.event</code>).</small></div>
+    <div><b>User → Feedback</b><br>1 → N<br><small>Un utilisateur écrit plusieurs avis (<code>Feedback.auteur</code>).</small></div>
+  </div>
+  <p style="font-size:10.6px">
+    Toutes les références sont résolues côté API avec <code>.populate()</code>. La note moyenne et le nombre
+    d’avis d’un événement sont calculés par une agrégation MongoDB (<code>$group</code>/<code>$avg</code>).
+  </p>
+</section>
+
+<!-- ============ PAGE 6 — API ============ -->
+<section class="page">
+  <h2>4. API REST</h2>
+  <p>Points d’entrée exposés par le serveur Express (préfixe <code>/api</code>).</p>
+  <table>
+    <tr><th style="width:70px">Méthode</th><th style="width:250px">Route</th><th style="width:120px">Accès</th><th>Description</th></tr>
+    <tr><td>POST</td><td><code>/auth/register</code></td><td>Public</td><td>Créer un compte (étudiant ou club)</td></tr>
+    <tr><td>POST</td><td><code>/auth/login</code></td><td>Public</td><td>Connexion, renvoie un jeton JWT</td></tr>
+    <tr><td>GET</td><td><code>/auth/me</code></td><td>Connecté</td><td>Profil de l’utilisateur courant</td></tr>
+    <tr><td>GET</td><td><code>/events</code></td><td>Public</td><td>Liste des événements publiés (recherche, filtre, tri)</td></tr>
+    <tr><td>GET</td><td><code>/events/:id</code></td><td>Public</td><td>Détail d’un événement</td></tr>
+    <tr><td>GET</td><td><code>/events/mes-inscriptions</code></td><td>Connecté</td><td>Événements auxquels l’utilisateur est inscrit</td></tr>
+    <tr><td>GET</td><td><code>/events/en-attente</code></td><td>Admin</td><td>Événements à valider</td></tr>
+    <tr><td>POST</td><td><code>/events</code></td><td>Club, Admin</td><td>Créer un événement</td></tr>
+    <tr><td>PATCH</td><td><code>/events/:id/valider</code></td><td>Admin</td><td>Valider (publier) un événement</td></tr>
+    <tr><td>POST</td><td><code>/events/:id/inscription</code></td><td>Connecté</td><td>S’inscrire à un événement</td></tr>
+    <tr><td>DELETE</td><td><code>/events/:id/inscription</code></td><td>Connecté</td><td>Se désinscrire</td></tr>
+    <tr><td>DELETE</td><td><code>/events/:id</code></td><td>Organisateur, Admin</td><td>Supprimer un événement</td></tr>
+    <tr><td>GET</td><td><code>/events/:id/feedback</code></td><td>Public</td><td>Avis d’un événement</td></tr>
+    <tr><td>POST</td><td><code>/events/:id/feedback</code></td><td>Inscrit</td><td>Publier un avis</td></tr>
+    <tr><td>DELETE</td><td><code>/feedback/:id</code></td><td>Auteur, Admin</td><td>Supprimer un avis</td></tr>
+  </table>
+  <div class="note">
+    <b>Comptes de démonstration</b> (créés par <code>npm run seed</code>) :<br>
+    <code>admin@campus.tn</code> · <code>club@campus.tn</code> · <code>etudiant@campus.tn</code> — mot de passe : <code>password123</code>
+  </div>
+</section>
+
+<!-- ============ PAGE 7 — CAPTURES + CONCLUSION ============ -->
+<section class="page">
+  <h2>5. Captures d’écran de l’application</h2>
+  <p><small>Interface moderne à thème clair/sombre, captures réalisées sur l’application en fonctionnement.</small></p>
+
+  <div class="shots">
+    <figure>
+      <img src="captures/01-login.png" alt="Page de connexion" />
+      <figcaption>Figure 1 — Page de connexion / création de compte</figcaption>
+    </figure>
+    <figure>
+      <img src="captures/02-accueil.png" alt="Tableau de bord" />
+      <figcaption>Figure 2 — Tableau de bord : événement à la une et compte à rebours</figcaption>
+    </figure>
+    <figure>
+      <img src="captures/03-evenements.png" alt="Liste des événements" />
+      <figcaption>Figure 3 — Exploration des événements : recherche, filtres et tri</figcaption>
+    </figure>
+    <figure>
+      <img src="captures/04-detail.png" alt="Détail d'un événement" />
+      <figcaption>Figure 4 — Détail d’un événement : inscription, places et avis</figcaption>
+    </figure>
+  </div>
+
+  <h2>6. Conclusion et perspectives</h2>
+  <p>
+    CampusConnect couvre l’ensemble du cycle de vie d’un événement universitaire : publication par les clubs,
+    validation par l’administrateur, consultation publique, inscription et retour d’expérience via les avis.
+    L’application repose sur une pile MERN cohérente, avec une API REST sécurisée (JWT, rôles, bcrypt) et une
+    interface réactive offrant un thème clair et sombre.
+  </p>
+  <p><b>Pistes d’évolution :</b></p>
+  <ul>
+    <li>Notifications par e-mail (confirmation d’inscription, rappel d’événement).</li>
+    <li>Export du calendrier (iCal) et gestion des listes d’attente.</li>
+    <li>Tableau de bord statistique pour les clubs (taux de remplissage, satisfaction).</li>
+    <li>Authentification via le compte universitaire (SSO) et modération plus fine des avis.</li>
+  </ul>
+</section>
+
+</body>
+</html>
